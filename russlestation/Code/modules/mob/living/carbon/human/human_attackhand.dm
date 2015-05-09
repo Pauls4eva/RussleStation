@@ -59,6 +59,18 @@
 				visible_message("\red <B>[M] has weakened [src]!</B>")
 				apply_effect(4, WEAKEN, armor_block)
 
+			if(mMuscles in M.mutations)			damage += 3
+
+			playsound(loc, "punch", 25, 1, -1)
+
+			visible_message("\red <B>[M] has punched [src]!</B>")
+
+			apply_damage(damage, HALLOSS, affecting, armor_block)
+			if(damage >= 9)
+				visible_message("\red <B>[M] has weakened [src]!</B>")
+				apply_effect(4, WEAKEN, armor_block)
+
+
 			return
 	else
 		if(istype(M,/mob/living/carbon))
