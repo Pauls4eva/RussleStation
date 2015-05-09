@@ -461,6 +461,33 @@ menu "Trait menu"
 		group = ""
 		is-disabled = false
 		saved-params = "is-checked"
+	elem 
+		name = "Muscular"
+		command = "mMuscles=1"
+		category = "Good traits"
+		is-checked = false
+		can-check = false
+		group = ""
+		is-disabled = false
+		saved-params = "is-checked"
+	elem 
+		name = "Bad traits"
+		command = ""
+		category = ""
+		is-checked = false
+		can-check = false
+		group = ""
+		is-disabled = false
+		saved-params = "is-checked"
+	elem 
+		name = "Weak"
+		command = "mWeak=1"
+		category = "Bad traits"
+		is-checked = false
+		can-check = false
+		group = ""
+		is-disabled = false
+		saved-params = "is-checked"
 
 menu "menu"
 	elem 
@@ -825,7 +852,7 @@ window "Telecomms IDE"
 window "Trait menu"
 	elem "Trait menu"
 		type = MAIN
-		pos = 395,0
+		pos = 281,0
 		size = 352x162
 		anchor1 = none
 		anchor2 = none
@@ -862,6 +889,62 @@ window "Trait menu"
 		macro = ""
 		menu = ""
 		on-close = ""
+	elem "button9"
+		type = BUTTON
+		pos = 128,112
+		size = 96x20
+		anchor1 = none
+		anchor2 = none
+		font-family = ""
+		font-size = 0
+		font-style = ""
+		text-color = #000000
+		background-color = none
+		is-visible = true
+		is-disabled = false
+		is-transparent = false
+		is-default = false
+		border = none
+		drop-zone = false
+		right-click = false
+		saved-params = "is-checked"
+		on-size = ""
+		text = "Weak"
+		image = ""
+		command = "mWeak=1"
+		is-flat = false
+		stretch = false
+		is-checked = false
+		group = ""
+		button-type = checkbox
+	elem "button8"
+		type = BUTTON
+		pos = 128,88
+		size = 96x20
+		anchor1 = none
+		anchor2 = none
+		font-family = ""
+		font-size = 0
+		font-style = ""
+		text-color = #000000
+		background-color = none
+		is-visible = true
+		is-disabled = false
+		is-transparent = false
+		is-default = false
+		border = none
+		drop-zone = false
+		right-click = false
+		saved-params = "is-checked"
+		on-size = ""
+		text = "Muscular"
+		image = ""
+		command = "mMuscles=1"
+		is-flat = false
+		stretch = false
+		is-checked = false
+		group = ""
+		button-type = checkbox
 	elem "label1"
 		type = LABEL
 		pos = 136,16
@@ -882,7 +965,7 @@ window "Trait menu"
 		right-click = false
 		saved-params = ""
 		on-size = ""
-		text = "Upgrades"
+		text = "Traits"
 		image = ""
 		image-mode = center
 		keep-aspect = false
@@ -890,8 +973,8 @@ window "Trait menu"
 		text-wrap = false
 	elem "button7"
 		type = BUTTON
-		pos = 128,68
-		size = 92x20
+		pos = 128,64
+		size = 96x20
 		anchor1 = none
 		anchor2 = none
 		font-family = ""
