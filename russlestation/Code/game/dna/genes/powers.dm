@@ -207,16 +207,30 @@
 	OnDrawUnderlays(var/mob/M,var/g,var/fat)
 		return "telekinesishead[fat]_s"
 
-/datum/dna/gene/basic/Muscles
+/datum/dna/gene/basic/muscles
 	name="Muscular"
-	activation_messages=list("You feel stonger.")
+	activation_messages=list("You feel stronger.")
 	deactivation_messages=list("You feel weak again.")
-	mutation=mMuscles
+	mutation=gMuscles
 	activation_prob=0
 
 /datum/dna/gene/basic/weak
 	name="Weak"
-	activation_messages=list("You feel weaker.")
-	deactivation_messages=list("Your muscles feel normal again.")
-	mutation=mWeak
+	activation_messages=list("You feel weak.")
+	deactivation_messages=list("You feel normal again.")
+	mutation=gWeak
+	activation_prob=0
+
+/datum/dna/gene/basic/Regenslow
+	name="Regenerative"
+	activation_messages=list("Your skin feels frail")
+	deactivation_messages=list("Your skin no longer feels frail")
+	mutation=gRegenslow
+	activation_prob=0
+
+/datum/dna/gene/basic/hypersensitive
+	name="Hypersensitive"
+	activation_messages=list("You feel that stuns last longer now")
+	deactivation_messages=list("You feel that stuns go away quicker now")
+	mutation=gHypersensitive
 	activation_prob=0

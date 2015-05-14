@@ -362,8 +362,10 @@ var/MAX_EXPLOSION_RANGE = 14
 #define mShock			109 	// insulated hands
 #define mSmallsize		110 	// table climbing
 #define mHeatres		111 	// limited fireproofing... In theory ~Aztec
-#define mMuscles		112
-#define mWeak			113
+#define gMuscles		112		// increases attack damage by 3
+#define gWeak			113		// decreases attack damage by 2
+#define gRegenslow		114		// regenerate blood a little faster
+#define gHypersensitive	115		// stuns last longer
 
 //disabilities
 #define NEARSIGHTED		1

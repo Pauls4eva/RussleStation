@@ -59,7 +59,7 @@
 				visible_message("\red <B>[M] has weakened [src]!</B>")
 				apply_effect(4, WEAKEN, armor_block)
 
-			if(mMuscles in M.mutations)			damage += 3
+			if(gMuscles in mutations)			damage += 3
 
 			playsound(loc, "punch", 25, 1, -1)
 
@@ -70,6 +70,8 @@
 				visible_message("\red <B>[M] has weakened [src]!</B>")
 				apply_effect(4, WEAKEN, armor_block)
 
+
+			if(gWeak in mutations)			damage += -2
 
 			return
 	else
@@ -176,9 +178,6 @@
 				damage += M.species.punch_damage
 			apply_damage(damage, BRUTE, affecting, armor_block)
 
-			if(mMuscles in M.mutations)			damage += 3
-
-
 			if(M.species.attack_verb == "punch")
 				playsound(loc, "punch", 25, 1, -1)
 			else
@@ -194,7 +193,7 @@
 				damage += M.species.punch_damage
 			apply_damage(damage, BRUTE, affecting, armor_block)
 
-			if(mWeak in M.mutations)			damage += -2
+			if(gWeak in M.mutations)			damage += -2
 
 
 			if(M.species.attack_verb == "punch")

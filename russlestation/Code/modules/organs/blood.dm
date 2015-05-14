@@ -54,6 +54,8 @@ var/const/BLOOD_VOLUME_SURVIVE = 122
 							break
 
 				B.volume += 0.1 // regenerate blood VERY slowly
+				if (gRegenslow in mutations)
+					B.volume += 0.2
 				if (reagents.has_reagent("nutriment"))	//Getting food speeds it up
 					B.volume += 0.4
 					reagents.remove_reagent("nutriment", 0.1)
