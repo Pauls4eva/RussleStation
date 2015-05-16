@@ -1,7 +1,7 @@
 /datum/game_mode/metro
 	name="Factions"
 	config_tag = "Factions"
-	required_players = 10
+	required_players = 1
 	required_enemies = 1
 	recommended_enemies = 10
 
@@ -15,7 +15,7 @@
 
 	var/eventNumbersToPickFrom = list(1,2)
 
-	if((world.time/10)>=360 && toggle_space_ninja && !sent_ninja_to_station)//If an hour has passed, relatively speaking. Also, if ninjas are allowed to spawn and if there is not already a ninja for the round.
+	if((world.time/10)>=360)//If an hour has passed, relatively speaking. Also, if ninjas are allowed to spawn and if there is not already a ninja for the round.
 		eventNumbersToPickFrom += 3
 	switch(pick(eventNumbersToPickFrom))
 
